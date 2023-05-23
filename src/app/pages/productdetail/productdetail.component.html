@@ -1,0 +1,21 @@
+<div class="product_detail">
+    <div class="container">
+        <h2>product detail</h2>
+
+        <a class="btn btn-sm btn-dark mb-3" routerLink="../../menu">Back</a>
+        <div class="row">
+            <div class="col-7" *ngIf="productdetail">
+                <div class="product_card d-flex flex-column h-100">
+                  <img src="{{productdetail[0].foodimg}}" alt="" class="img-fluid">
+                  <div class="c_body p-3 bg-light text-dark h-100">
+                    <h5 class="mb-1">{{productdetail[0].foodname}}</h5>
+                    <p class="mb-1">{{productdetail[0].fooddetail}}</p>
+                    <b class="d-block mb-1">{{productdetail[0].foodprice}}</b>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

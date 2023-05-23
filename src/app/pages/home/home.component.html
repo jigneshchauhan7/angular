@@ -1,0 +1,92 @@
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../../assets/images/banner_1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/images/banner_2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../../assets/images/banner_3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- food process -->
+  <div class="food_process text-center py-5">
+    <div class="container">
+        <h2 class="text-start mb-3">How to get Fresh Food</h2>
+        <div class="row g-3">
+            <div class="col-6 col-lg-4">
+                <div class="process-card bg-dark py-4">
+                    <h3 class="mb-1 text-green">1</h3>
+                    <p class="text-light m-0">Select Food</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="process-card bg-dark py-4">
+                    <h3 class="mb-1 text-green">2</h3>
+                    <p class="text-light m-0">Fill the Details</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4">
+                <div class="process-card bg-dark py-4">
+                    <h3 class="mb-1 text-green">3</h3>
+                    <p class="text-light m-0">Your Order Delivered in minute</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <!-- product -->
+  <div class="product py-5">
+    <div class="container">
+      <h2 class="text-start mb-3">Costomers Favourite Food</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let fd of fooddata;index as i">
+          <div class="product_card d-flex flex-column h-100" *ngIf="i<=3">
+            <img src="{{fd.foodimg}}" alt="" class="img-fluid">
+            <div class="c_body p-3 bg-light text-dark h-100">
+              <h5 class="mb-1">{{fd.foodname}}</h5>
+              <b class="d-block">{{fd.foodprice}} $</b>
+            </div>
+          </div>
+        </div>
+
+        
+        <div>
+          <a routerLink="menu" class="d-inline menu btn btn-success">View all</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  

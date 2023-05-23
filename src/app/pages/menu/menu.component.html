@@ -1,0 +1,21 @@
+<!-- product -->
+<div class="product py-5">
+    <div class="container">
+      <h2 class="text-start mb-3">Costomers Favourite Food</h2>
+      <div class="row g-4">
+        
+        <div class="col-md-6 col-lg-4 col-xl-3" *ngFor="let fd of foodData">
+          <div class="product_card d-flex flex-column h-100">
+            <img src="{{fd.foodimg}}" alt="" class="img-fluid">
+            <div class="c_body p-3 bg-light text-dark h-100">
+              <h5 class="mb-1">{{fd.foodname}}</h5>
+              <p class="mb-1">{{fd.fooddetail}}</p>
+              <b class="d-block mb-1">{{fd.foodprice}}</b>
+              <a [routerLink]="['/menu',fd.id]" class="btn btn-sm btn-success">Buy</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
